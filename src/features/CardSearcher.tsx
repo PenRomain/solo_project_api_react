@@ -14,24 +14,28 @@ function CardSearcher(): JSX.Element {
   }, []);
 
   return (
-    <div className="card_container">
-      <h1>MAKE YOUR SEARCH</h1>
-      <input
-        onChange={(e) => setSearch(e.target.value)}
-        type="text"
-        name="search"
-        id="search_id"
-      />
-      {search &&
-        cards
-          .filter(
-            (card) =>
-              card.name.toLowerCase().includes(search.toLowerCase()) ||
-              (card.status.toLowerCase().includes(search.toLowerCase()) && (
-                <Card key={card.id} card={card} />
-              ))
-          )
-          .map((card) => <Card key={card.id} card={card} />)}
+    <div className="search_page">
+      <div className="searcher">
+        <h1>MAKE YOUR SEARCH</h1>
+        <input
+          onChange={(e) => setSearch(e.target.value)}
+          type="text"
+          name="search"
+          id="search_id"
+        />
+      </div>
+      <div className="card_container">
+        {search &&
+          cards
+            .filter(
+              (card) =>
+                card.name.toLowerCase().includes(search.toLowerCase()) ||
+                (card.status.toLowerCase().includes(search.toLowerCase()) && (
+                  <Card key={card.id} card={card} />
+                ))
+            )
+            .map((card) => <Card key={card.id} card={card} />)}
+      </div>
     </div>
   );
 }

@@ -12,3 +12,8 @@ export interface Plainswalker {
   image: string;
   id: number;
 }
+
+export interface Pokemon {
+  id: number;
+  gif: string;
+}

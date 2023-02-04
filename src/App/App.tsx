@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import './App.css';
 
 import CardSearcher from '../features/CardSearcher';
-import CounterPage from '../features/CounterPage';
+import ReactPage from '../features/ReactPage';
 // import { Plainswalker } from '../features/types';
 
 function App(): JSX.Element {
   // const [count, setCount] = useState(0);
   // const [step, setStep] = useState(1);
-  const [page, setPage] = useState('counter');
+  const [page, setPage] = useState('react');
   // const [cards, setCards] = useState<Plainswalker[]>([]);
 
   // function handlePlus(): void {
@@ -32,14 +32,22 @@ function App(): JSX.Element {
     <div className="App">
       <header className="App-header">
         <div className="buttons">
-          <button type="button" onClick={() => setPage('counter')}>
-            Counter
+          <button
+            className="main_buttons"
+            type="button"
+            onClick={() => setPage('react')}
+          >
+            REACT
           </button>
-          <button type="button" onClick={() => setPage('cards')}>
+          <button
+            className="main_buttons"
+            type="button"
+            onClick={() => setPage('cards')}
+          >
             CARDS
           </button>
         </div>
-        {page === 'counter' && <CounterPage />}
+        {page === 'react' && <ReactPage />}
         {page === 'cards' && <CardSearcher />}
       </header>
     </div>

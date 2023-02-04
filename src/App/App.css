@@ -38,6 +38,24 @@ body {
   color: #61dafb;
 }
 
+.main_buttons {
+  margin: 20px 10px 20px 10px;
+  width: 150px;
+  height: 40px;
+}
+
+.search_page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.searcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card_container {
   display: inline-grid;
   grid-template-columns: repeat(4, 330px);
@@ -46,13 +64,22 @@ body {
 
 img,
 .card_block {
+  margin: 10px;
   width: 300px;
+  height: 417px;
 
   border-radius: 10px;
 }
 
+/*  */
+
+/* .card_block:hover {
+  background-image: url('../../public/mtgkeckmaster.gif');
+} */
+
 #search_id {
   /* display: grid; */
+  margin: 20px;
   height: 50px;
   width: 300px;
 }
